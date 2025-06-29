@@ -1,15 +1,25 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer components {
   .auth-input {
-    @apply w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all dark:bg-gray-700 dark:text-white;
+    @apply w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all;
   }
 
   .auth-button {
-    @apply w-full py-3 px-4 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-colors disabled:opacity-70 disabled:cursor-not-allowed;
+    @apply w-full py-3 px-4 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-lg transition-colors disabled:opacity-70 disabled:cursor-not-allowed;
   }
 
   .auth-link {
-    @apply text-primary-600 hover:text-primary-500 dark:text-primary-400 dark:hover:text-primary-300 font-medium transition-colors;
+    @apply text-primary-500 hover:text-primary-600 font-medium transition-colors;
+  }
+
+  .auth-container {
+    @apply min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8;
+  }
+
+  .auth-card {
+    @apply bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10;
   }
 }
